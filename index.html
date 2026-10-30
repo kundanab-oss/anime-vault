@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANTIMONY</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="glow-effect"></div>
+    <div class="hero-content">
+      <h1 class="title">ANTIMONY</h1>
+      <p class="subtitle">DARK AMV & WALLPAPER VAULT</p>
+      <div class="credit">Made by <span>Aarav Kumar</span></div>
+    </div>
+  </header>
+
+  <nav class="filter-bar">
+    <button class="filter-btn active" onclick="filterMedia('all')">ALL</button>
+    <button class="filter-btn" onclick="filterMedia('image')">WALLPAPERS</button>
+    <button class="filter-btn" onclick="filterMedia('video')">VIDEOS</button>
+  </nav>
+
+  <main class="gallery-container">
+
+    <!-- Image Card 1 -->
+    <div class="card image" onclick="openLightbox('assets/kkumar7510_pindown.io_1791021917.jpg', 'image')">
+      <div class="media-wrapper">
+        <img src="assets/kkumar7510_pindown.io_1791021917.jpg" alt="Dark Angel Barbwire Art">
+        <div class="overlay">
+          <span class="type-tag">WALLPAPER</span>
+          <h3>Barbed Halo</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Card 2 -->
+    <div class="card image" onclick="openLightbox('assets/Trending 4K Amoled Walpaper For PC.jpg', 'image')">
+      <div class="media-wrapper">
+        <img src="assets/Trending 4K Amoled Walpaper For PC.jpg" alt="Amoled Anime Wallpaper">
+        <div class="overlay">
+          <span class="type-tag">WALLPAPER</span>
+          <h3>Cyan Gaze</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Card 1 -->
+    <div class="card video">
+      <div class="media-wrapper">
+        <video loop muted playsinline onmouseover="this.play()" onmouseout="this.pause()">
+          <source src="assets/Shinigami_00_pindown.io_1789183399.mp4" type="video/mp4">
+        </video>
+        <div class="overlay" onclick="openLightbox('assets/Shinigami_00_pindown.io_1789183399.mp4', 'video')">
+          <span class="type-tag">AMV EDIT</span>
+          <h3>Domain Expansion</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Card 2 -->
+    <div class="card video">
+      <div class="media-wrapper">
+        <video loop muted playsinline onmouseover="this.play()" onmouseout="this.pause()">
+          <source src="assets/WorkerrF90_pindown.io_1789141609.mp4" type="video/mp4">
+        </video>
+        <div class="overlay" onclick="openLightbox('assets/WorkerrF90_pindown.io_1789141609.mp4', 'video')">
+          <span class="type-tag">AMV EDIT</span>
+          <h3>Purple Aura</h3>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div id="lightbox-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; ANTIMONY. Curated by Aarav Kumar.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
